@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Game</title>
+    <link type="text/css" rel="stylesheet" href="memory.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+<header>
+
+    <h1 style="text-align: center;  padding-top: 50px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 50px; color: blueviolet;">
+        MEMORY GAME</h1>
+
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+    <header>
+        <p id="new_game"><a href="index.html">New Game</a></p>
+        <p id="player">&nbsp;</p>
+        <p id="high-score">&nbsp;</p>
+        <p id="correct">&nbsp;</p>
+        <div class="clear"></div>
+    </header>
+</header>
+
+<main>
+    <div class="tab">
+        <button class="tablinks" onclick="showPanel(0)" id="defaultOpen">Play Games</button>
+        <button class="tablinks" onclick="showPanel(1)" id="defaultOpen">View Rules</button>
+        <button class="tablinks" onclick="showPanel(2)" id="defaultOpen">Settings</button>
+    </div>
+
+    <div id="PlayGames" class="tabPanel" style="padding-top: 80px;">
+<!-- 
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png">
+        <img src="images/back.png"> -->
+    </div>
+
+    <div id="ViewRules" class="tabPanel" style="padding-top: 80px;">
+        <h2>How to play the memory game?</h2>
+        <ul class="list-group">
+
+            <li class="list-group-item list-group-item-primary">The cards are placed face down. Each card has a matching
+                card.
+            </li>
+            <li class="list-group-item list-group-item-secondary">For each turn, the player select two cards.</li>
+            <li class="list-group-item list-group-item-success">If the cards match, they are removed from the board.
+            </li>
+            <li class="list-group-item list-group-item-danger">If the cards don't match, they are turned face down
+                again.
+            </li>
+            <li class="list-group-item list-group-item-warning">At the end of the game, the player receives a score
+                based on the number
+                of correct selections that were made.
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="Settings" class="tabPanel">
+        <form style="margin-left: 320px;  margin-right: 320px; margin-top: 120px; border: 3px solid rgb(255, 0, 191);">
+            <div style="padding-left: 80px; padding-top: 20px;" class="mb-3">
+                <label for="playerName" class="form-label">Player Name</label>
+                <input type="text" class="form-control" id="playerName">
+            </div>
+            <div style="padding-left: 80px; padding-top: 20px;" class="mb-3">
+                <label for="num_cards" class="form-label">Number of Cards</label>
+                <select id='num_cards'>
+                    <option value="48" >48</option>
+                    <option  value="40" >40</option>
+                    <option value="32" >32</option>
+                    <option value="24" >24</option>
+                    <option value="16" >16</option>
+                    <option  value="8" >8</option>
+                </select><br>
+            </div>
+            <div style="padding-left: 80px; padding-top: 20px;">
+                <button type="button" class="btn btn-primary" id="saveSettingBtn">Save Settings</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+</div>
+</body>
+
+
+<script src="main.js"  type="module" ></script>
+<!-- <script src="library_cards.js"></script> -->
+</html>
+
+
+
